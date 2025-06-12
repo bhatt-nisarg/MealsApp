@@ -4,10 +4,8 @@ import 'package:meals/screens/categories.dart';
 import 'package:meals/screens/filters.dart';
 import 'package:meals/screens/meals.dart';
 import 'package:meals/widgets/main_drawer.dart';
-import 'package:meals/provider/meal_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:meals/provider/filter_provider.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class TabsScreen extends ConsumerStatefulWidget {
   const TabsScreen({super.key});
@@ -40,7 +38,7 @@ class _TabScreenState extends ConsumerState<TabsScreen> {
       // close drawer
       Navigator.of(context).pop();
       Navigator.of(context).push<Map<Filter, bool>>(
-          MaterialPageRoute(builder: (ctx) => FilterScreen()));
+          MaterialPageRoute(builder: (ctx) => const FilterScreen()));
     } else {
       Navigator.of(context).pop();
     }
